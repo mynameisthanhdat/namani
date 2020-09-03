@@ -1,0 +1,30 @@
+  <section id="pricing" class="secondary-color text-center scrollto clearfix ">
+    <div class="row clearfix">
+
+      <div class="section-heading">
+        <h3>{{pricing.tagLine}}</h3>
+        <h2 class="section-title">{{pricing.title}}</h2>
+      </div>
+
+        <div class="pricing-block featured col-3 wow fadeInUp" data-wow-delay="0.4s" *ngFor="let item of pricingContent">
+          <div class="pricing-block-content">
+            <h3>{{item.species}}</h3>
+            <p class="pricing-sub">{{item.sub}}</p>
+            <div class="pricing">
+              <div class="price"><span>$</span>{{item.money}}</div>
+              <p>{{item.content}}</p>
+            </div>
+            <ul>
+              <li>{{item.download}}</li>
+              <li>{{item.extention}}</li>
+              <li>{{item.tutorial}}</li>
+              <li>{{item.forum}}</li>
+              <li>{{item.year}}</li>
+            </ul>
+            <a href="#" class="button">BUY TODAY</a>
+          </div>
+        </div>
+
+
+    </div>
+  </section>
