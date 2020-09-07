@@ -9,12 +9,14 @@ export class BlogComponent implements OnInit {
 
   blog = {
     tagLine: 'MY BLOG',
-    title: 'Thoughts is thing...'
+    title: 'Thoughts become things...'
   }
 
-  constructor() { }
+
+  constructor( ) { }
 
   ngOnInit(): void {
   }
+
 
 }

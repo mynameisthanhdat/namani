@@ -21,7 +21,7 @@ const routes: Routes = [
   {path: 'Clients', component: ClientsComponent},
   {path: 'Pricing', component: PriceComponent},
   {path: 'Blog', component: BlogComponent},
-  {path: 'Articale/:id', component: ArticleComponent},
+  {path: 'Article/:id', component: ArticleComponent},
 ];
 
 

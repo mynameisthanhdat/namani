@@ -1,1 +1,13 @@
-<p>article works!</p>
+<div class="post-block featured col-1 wow fadeInUp" data-wow-delay="0.4s">
+    <div class="post-block-content" *ngIf="post">
+        <h3>{{post.title}}</h3>
+        <p class="post-sub">By {{post.author}} | {{post.publishdate | date: 'dd-MMM-yyyy'}}</p>
+        <div class="post-featured-image">
+          <img src="../../assets/images/gallery-images/{{post.image}}" alt="">
+        </div>
+        <ul>
+          {{post.excert}}
+        </ul>
+        <a class="button" (click)="goBack()">Go Back</a>
+    </div>
+</div>

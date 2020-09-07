@@ -1,13 +1,13 @@
-<div class="post-block featured col-3 wow fadeInUp" data-wow-delay="0.4s" *ngFor="let item of post">
+<div *ngFor="let item of post" class="post-block featured col-3 wow fadeInUp" data-wow-delay="0.4s">
     <div class="post-block-content">
-      <h3>{{item.title}}</h3>
-      <p class="post-sub">By {{item.author}} | {{item.publishdate | date: 'dd-MMM-yyyy'}}</p>
-      <div class="post-featured-image">
+        <h3>{{item.title}}</h3>
+        <p class="post-sub">By {{item.author}} | {{item.publishdate | date: 'dd-MMM-yyyy'}}</p>
+        <div class="post-featured-image">
           <img src="../../assets/images/gallery-images/{{item.image}}" alt="">
-      </div>
-      <ul>
+        </div>
+        <ul>
           {{item.excert}}
-      </ul>
-      <a routerLink="/Article/{{post.id}}" class="button">Read more...</a>
+        </ul>
+        <a routerLink="/Article/{{item.id}}" class="button">Read more...</a>
     </div>
 </div>

@@ -1,21 +1,16 @@
-<!--Banner Content-->
 <header id="banner" class="scrollto clearfix" data-enllax-ratio=".5">
 
   <div id="banner-content" class="row clearfix">
 
-    <div class="col-38">
+    <div class="col-38" *ngFor="let item of header">
       <div class="section-heading">
-        <h1>{{header.heading}}</h1>
-        <h2>{{header.headingText}}</h2>
+        <h1>{{item.heading}}</h1>
+        <h2>{{item.headingText}}</h2>
       </div>
-
-      <!--Call to Action-->
-      <a href="{{header.buttonLink}}" class="button">{{header.buttonText}}</a>
-      <!--End Call to Action-->
+      <a href="{{item.buttonLink}}" class="button">{{item.buttonText}}</a>
 
     </div>
 
   </div>
 
 </header>
-<!--End of Row-->

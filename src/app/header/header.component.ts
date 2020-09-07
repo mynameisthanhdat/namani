@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from '../config.service';
 
+import { Header } from '../info';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -8,23 +10,16 @@ import { ConfigService } from '../config.service';
 })
 export class HeaderComponent implements OnInit {
 
-  header = { 
-    heading: 'My website',
-    headingText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nihil impedit quos tempora assumenda voluptatibus architecto, ipsam quaerat numquam, alias cupiditate animi! Veritatis numquam quasi eveniet eos beatae aperiam dolor.',
-    buttonText: "Let's started",
-    buttonLink: '/home'
-  };
-
-  header1 = {};
+  header : Header[];
 
   constructor(private config: ConfigService) { }
 
   ngOnInit() {
-    this.header1 = this.getHeader();
+    this.getHeader();
   }
 
-  getHeader() {
-    return this.config.getConfig().header;
+  getHeader(): void {
+    this.header = this.config.getHeader()
   }
 
 }

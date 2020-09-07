@@ -1,16 +1,31 @@
 import { Injectable } from '@angular/core';
-import { configuation } from './configuation';
+// import { configuation } from './configuation';
+
+import { Header, Intro, Post } from './info';
+import { HEADER, INTRO, POST } from './mock-info';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ConfigService {
 
-  config = configuation;
+  // config = configuation;
 
   constructor() { }
 
-  getConfig() {
-    return this.config;
+  getHeader(): Header[] {
+    return HEADER;
+  }
+
+  getIntro(): Intro[] {
+    return INTRO;
+  }
+
+  getPost(): Post[] {
+    return POST;
+  }
+
+  getPostById (id: number) {
+    return this.getPost[ id - 1 ];
   }
 }
